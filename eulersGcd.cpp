@@ -1,4 +1,8 @@
 #include <iostream>
+#include <cmath>
+#include <cstdint>
+#include <chrono>
+#include <iomanip>
 // Based on TI Education's 'Euler Totient Function' PDF
 
 int gcd(int a, int b) {
@@ -15,17 +19,12 @@ int gcd(int a, int b) {
     return a;
 }
 
-int main() {
-    int n;
-
-    std::cout << "Enter a positive integer: ";
-    std::cin >> n;
-
+int calcEulersv1(int n) {
     int count = 0;
-    for (int i = 1; i <= n; ++i) {
-        if (gcd(n, i) == 1) {
-            count = count+1;
+    for (int i = 0; i < n; ++i) {
+        if (gcd(n, i)==1) {
+            ++count;
         }
     }
-    std::cout << "phi("<<n<<"): " << count << std::endl;
+    return count;
 }

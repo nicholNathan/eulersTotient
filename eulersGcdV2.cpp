@@ -18,17 +18,12 @@ uint64_t gcd(uint64_t a, uint64_t b) {
     return a;
 }
 
-int main() {
-    uint64_t n;
-
-    std::cout << "Enter a positive integer: ";
-    std::cin >> n;
-
+int calcEulersv2(int n) {
     uint64_t count = 0;
-    for (int i = 1; i <= n; ++i) {
-        if (gcd(n, i) == 1) {
-            count = count+1;
+    for (uint64_t i = 0; i < n; ++i) {
+        if (gcd(n, i)==1) {
+            ++count;
         }
     }
-    std::cout << "Euler's Totient: " << count << std::endl;
+    return count;
 }
