@@ -1,4 +1,3 @@
-// benchmark.cpp
 #include <iostream>
 #include <chrono>
 #include <vector>
@@ -26,23 +25,34 @@ double bench(F func, uint64_t start, uint64_t end, int num_runs) {
     for (double time : iterations) {
         avgDuration += time;
     }
-    std::cout << "  Total Duration: " << std::setprecision(5) << avgDuration << " ms" << std::endl;
+    std::cout << "  Total Duration: " << std::setprecision(5) << avgDuration << " ms" << '\n';
     avgDuration /= num_runs;
-    std::cout << "  Avg Duration: " << std::setprecision(5) << avgDuration << " ms" << std::endl;
+    std::cout << "  Avg Duration: " << std::setprecision(5) << avgDuration << " ms" << '\n';
     return avgDuration;
 }
 
-int main() {
-    const uint64_t start = 1;
-    const uint64_t end = 1000;
-    const int num_runs = 5;
+int main(int argc, char* argv[]) {
+    if (argc != 4) {
+        std::cerr << "Usage: " << argv[0] << " <start> <end> <num_runs>" << '\n';
+        return 0;
+    }
 
-    std::cout << "eulersGcd (v1 - int):" << std::endl;
+    uint64_t start = std::stoull(argv[1]);
+    uint64_t end = std::stoull(argv[2]);
+    int num_runs = std::stoi(argv[3]);
+    std::cout << "eulersGcd (v1 - int):" << '\n';
     double time_v1 = bench(EULERSGCD_H::calcEulersv1, start, end, num_runs);
-    std::cout << "\neulersGcdV2 (uint64_t):" << std::endl;
+    std::cout << "\neulersGcdV2 (uint64_t):" << '\n';
     double time_v2 = bench(EULERSGCDV2_H::calcEulersv2, start, end, num_runs);
-    std::cout << "\nPrime Factorization:" << std::endl;
+    std::cout << "\nPrime Factorization:" << '\n';
     double time_v3 = bench(PRIMEFACT_H::calcEulersv3, start, end, num_runs);
-
     return 0;
 }
+
+
+
+/* 
+    TODO:
+    - need to have this print out somewhere, otherwise it's kind of useless
+      - can print out all factors (very slow), or can just print out final result
+ */
