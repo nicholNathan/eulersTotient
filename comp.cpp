@@ -10,7 +10,7 @@
 template<typename F>
 double bench(F func, uint64_t start, uint64_t end, int num_runs) {
     std::vector<double> iterations;
-
+    iterations.reserve(num_runs);
     for (int i = 0; i < num_runs; ++i) {
         auto startTime = std::chrono::high_resolution_clock::now();
         for (uint64_t n = start; n <= end; ++n) {

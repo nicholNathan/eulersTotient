@@ -3,7 +3,7 @@
 <br><p>Compilation:</p>
 
 ```
-g++ comp.cpp eulersGcd.cpp eulersGcdV2.cpp primeFact.cpp -o comp -O2
+g++ comp.cpp eulersGcd.cpp eulersGcdV2.cpp primeFact.cpp -o comp -O2 -fno-exceptions
 ```
 
 <br>

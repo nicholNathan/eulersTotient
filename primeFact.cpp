@@ -8,6 +8,7 @@
 
 std::vector<int> phi(int n) {
     std::vector<int> phi(n + 1);
+    phi.reserve(n+1);
     for (int i = 0; i <= n; i++)
         phi[i] = i;
 
