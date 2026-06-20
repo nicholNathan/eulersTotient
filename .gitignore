@@ -1,0 +1,10 @@
+build/
+cmake-build-*/
+
+*.o
+*.a
+*.dylib
+*.so
+*.exe
+
+comp
