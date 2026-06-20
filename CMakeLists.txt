@@ -10,6 +10,7 @@ add_library(eulers_totient STATIC
     src/eulersGcd.cpp
     src/eulersGcdV2.cpp
     src/sieve.cpp
+    src/primeFact.cpp
 )
 
 target_include_directories(eulers_totient PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include")
