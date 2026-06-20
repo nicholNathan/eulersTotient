@@ -13,9 +13,9 @@ prime factorization approach with rough benchmarking.
 └── CMakeLists.txt
 ```
 
-## Build
+## CMake Config
 
-Configure and build with CMake:
+CMake usage:
 
 ```
 cmake -S . -B build
@@ -24,11 +24,6 @@ cmake --build build
 Example usage:
 ```
 ./build/bin/comp 1 1000 10
-```
-
-Usage:
-
-```
 ./build/bin/comp <start> <end> <num_iterations>
 ```
 
