@@ -4,8 +4,6 @@
 #include <cmath>
 #include <cstdint>
 
-// Based on TI Education's 'Euler Totient Function' PDF
-
 uint64_t gcd(uint64_t a, uint64_t b) {
     while (a*b > 0) {
         if (a > b) {

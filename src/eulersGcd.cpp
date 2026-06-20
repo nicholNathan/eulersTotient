@@ -5,7 +5,6 @@
 #include <cstdint>
 #include <chrono>
 #include <iomanip>
-// Based on TI Education's 'Euler Totient Function' PDF
 
 int gcd(int a, int b) {
     while (a*b > 0) {

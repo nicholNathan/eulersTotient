@@ -1,15 +1,14 @@
 ## Euler's Totient Function
 
-Implementations of Euler's Totient Function comparing basic GCD to a
-prime factorization approach with rough benchmarking.
+Implementations of Euler's Totient Function comparing basic GCD to the Sieve of Eratosthenes with rough benchmarking.
 
 ## Project Layout
 
 ```
 .
-├── app/                    # CLI benchmark executable
-├── include/eulersTotient/  # Public headers
-├── src/                    # Library implementation
+├── app/
+├── include/eulersTotient/
+├── src/
 └── CMakeLists.txt
 ```
 

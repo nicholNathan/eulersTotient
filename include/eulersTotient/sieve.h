@@ -1,5 +1,5 @@
-#ifndef PRIMEFACT_H
-#define PRIMEFACT_H
+#ifndef SIEVE_H
+#define SIEVE_H
 
 #include <vector>
 #include <iostream>

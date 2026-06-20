@@ -1,7 +1,5 @@
-// euler's using prime factorization (runs in O(sqrt(n)))
-// FROM GEEKS 4 GEEKS
-
-#include "eulersTotient/primeFact.h"
+// euler's using sieve
+#include "eulersTotient/sieve.h"
 
 #include <vector>
 #include <iostream>

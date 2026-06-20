@@ -5,7 +5,7 @@
 #include <iomanip>
 #include "eulersTotient/eulersGcd.h"
 #include "eulersTotient/eulersGcdV2.h"
-#include "eulersTotient/primeFact.h"
+#include "eulersTotient/sieve.h"
 
 template<typename F>
 double bench(F func, uint64_t start, uint64_t end, int num_runs) {
@@ -44,8 +44,8 @@ int main(int argc, char* argv[]) {
     double time_v1 = bench(EULERSGCD_H::calcEulersv1, start, end, num_runs);
     std::cout << "\neulersGcdV2 (uint64_t):" << '\n';
     double time_v2 = bench(EULERSGCDV2_H::calcEulersv2, start, end, num_runs);
-    std::cout << "\nPrime Factorization:" << '\n';
-    double time_v3 = bench(PRIMEFACT_H::calcEulersv3, start, end, num_runs);
+    std::cout << "\nSieve of Eratosthenes:" << '\n';
+    double time_v3 = bench(SIEVE_H::calcEulersv3, start, end, num_runs);
     return 0;
 }
 
