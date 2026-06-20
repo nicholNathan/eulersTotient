@@ -2,16 +2,6 @@
 
 Implementations of Euler's Totient Function comparing basic GCD to the Sieve of Eratosthenes with rough benchmarking.
 
-## Project Layout
-
-```
-.
-├── app/
-├── include/eulersTotient/
-├── src/
-└── CMakeLists.txt
-```
-
 ## CMake Config
 
 CMake usage:
