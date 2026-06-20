@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.15)
 
 project(eulersTotient
     VERSION 1.0.0
-    DESCRIPTION "Euler's Totient Function implementations and benchmark"
+    DESCRIPTION "Euler's Totient Function"
     LANGUAGES CXX
 )
 
@@ -12,10 +12,7 @@ add_library(eulers_totient STATIC
     src/primeFact.cpp
 )
 
-target_include_directories(eulers_totient
-    PUBLIC
-        "${CMAKE_CURRENT_SOURCE_DIR}/include"
-)
+target_include_directories(eulers_totient PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include")
 
 target_compile_features(eulers_totient PUBLIC cxx_std_11)
 
