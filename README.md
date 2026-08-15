@@ -1,6 +1,6 @@
 ## Euler's Totient Function
 
-Implementations of Euler's Totient Function comparing basic GCD to the Sieve of Eratosthenes with rough benchmarking.
+Implementations of Euler's Totient Function comparing basic GCD, prime factorization, and Sieve of Eratosthenes with rough benchmarking.
 
 ## CMake Config
 

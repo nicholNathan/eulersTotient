@@ -1,5 +1,5 @@
 // euler's using sieve
-#include "eulersTotient/sieve.h"
+#include "../include/eulersTotient/sieve.h"
 
 #include <vector>
 #include <iostream>
@@ -9,19 +9,20 @@
 std::vector<int> phi(int n) {
     std::vector<int> phi(n + 1);
     phi.reserve(n+1);
-    for (int i = 0; i <= n; i++)
+    for (int i = 0; i <= n; i++) {
         phi[i] = i;
-
+    }
     for (int i = 2; i <= n; i++) {
         if (phi[i] == i) {
-            for (int j = i; j <= n; j += i)
+            for (int j = i; j <= n; j += i) {
                 phi[j] -= phi[j] / i;
+            }
         }
     }
     return phi;
 }
 
-int calcEulersv3(int n) {
+uint64_t calcEulersv3(int n) {
     uint64_t res = 0;
     std::vector<int> ans = phi(n);
     for (int i = 0; i < ans.size(); ++i) {

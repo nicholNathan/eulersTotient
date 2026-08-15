@@ -7,6 +7,6 @@
 #include <cstdint>
 
 std::vector<int> phi(int n);
-int calcEulersv3(int n);
+uint64_t calcEulersv3(int n);
 
 #endif

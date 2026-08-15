@@ -1,4 +1,4 @@
-#include "eulersTotient/eulersGcdV2.h"
+#include "../include/eulersTotient/eulersGcdV2.h"
 
 #include <iostream>
 #include <cmath>
