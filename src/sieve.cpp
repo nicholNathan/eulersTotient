@@ -23,10 +23,6 @@ std::vector<int> phi(int n) {
 }
 
 uint64_t calcEulersv3(int n) {
-    uint64_t res = 0;
     std::vector<int> ans = phi(n);
-    for (int i = 0; i < ans.size(); ++i) {
-        res += i;
-    }
-    return res;
+    return static_cast<uint64_t>(ans[n]);
 }
