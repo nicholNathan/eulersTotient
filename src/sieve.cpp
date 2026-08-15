@@ -1,5 +1,5 @@
 // euler's using sieve
-#include "../include/eulersTotient/sieve.h"
+#include "../include/sieve.h"
 
 #include <vector>
 #include <iostream>

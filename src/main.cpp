@@ -3,21 +3,21 @@
 #include <vector>
 #include <cmath>
 #include <iomanip>
-#include "eulersTotient/eulersGcd.h"
-#include "eulersTotient/eulersGcdV2.h"
-#include "eulersTotient/sieve.h"
-#include "eulersTotient/primeFact.h"
+#include "../include/eulersGcd.h"
+#include "../include/eulersGcdV2.h"
+#include "../include/sieve.h"
+#include "../include/primeFact.h"
 
 template<typename F>
 double bench(F func, uint64_t start, uint64_t end, int num_runs) {
     std::vector<double> iterations;
     iterations.reserve(num_runs);
     for (int i = 0; i < num_runs; ++i) {
-        auto startTime = std::chrono::high_resolution_clock::now();
+        auto startTime = std::chrono::steady_clock::now();
         for (uint64_t n = start; n <= end; ++n) {
             func(n);
         }
-        auto endTime = std::chrono::high_resolution_clock::now();
+        auto endTime = std::chrono::steady_clock::now();
         auto duration = std::chrono::duration_cast<std::chrono::microseconds>(endTime - startTime);
         iterations.push_back(duration.count() / 1000.0);
     }

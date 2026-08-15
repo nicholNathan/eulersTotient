@@ -1,4 +1,4 @@
-#include "../include/eulersTotient/primeFact.h"
+#include "../include/primeFact.h"
 
 #include <vector>
 #include <iostream>
